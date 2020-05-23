@@ -1,0 +1,15 @@
+<form>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Buscador SpotiApp</label>
+      <input type="text" class="form-control" (keyup)="buscar(termino.value)" #termino >
+      <small  class="form-text text-muted"> Cancion que buscas </small>
+    </div>
+    
+  </form>
+
+<div *ngIf="loading">
+    <app-loading></app-loading>
+
+</div>
+
+  <app-tarjetas [items]="soundTracks"  ></app-tarjetas>
